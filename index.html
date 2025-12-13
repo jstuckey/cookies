@@ -89,7 +89,8 @@
     document.getElementById('random-link').addEventListener('click', function(e) {
       e.preventDefault();
       const urls = [haileyUrl, laylaUrl];
-      const chosen = urls[Math.floor(Math.random() * urls.length)];
+      const idx = Math.random() < 0.5 ? 0 : 1;
+      const chosen = urls[idx];
       window.location.href = chosen;
     });
   </script>
