@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layla and Hailey's Cookie Sales</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #4caf50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 2rem;
+    }
+    .row {
+      display: flex;
+      width: 50%;
+      gap: 2rem;
+      margin-bottom: 1rem;
+    }
+    .box {
+      flex: 1;
+      background: white;
+      border: 2px solid #4caf50;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      text-decoration: none;
+      color: #333;
+    }
+    .box:hover {
+      background: #e8f5e9;
+    }
+    .random-box {
+      margin-top: 1rem;
+      background: #fffde7;
+      border-color: #ffb300;
+      color: #ffb300;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    We are selling Girl Scout cookies to raise money for our troop!
+  </header>
+  <div class="container">
+    <div class="row">
+      <a href="#hailey" class="box" id="hailey-link">
+        <img src="https://via.placeholder.com/100?text=Hailey" alt="Hailey" style="display:block;margin:0 auto 1rem;">
+        <h2>Hailey</h2>
+        <p>Daisy Scout</p>
+      </a>
+      <a href="#layla" class="box" id="layla-link">
+        <img src="https://via.placeholder.com/100?text=Layla" alt="Layla" style="display:block;margin:0 auto 1rem;">
+        <h2>Layla</h2>
+        <p>Brownie Scout</p>
+      </a>
+    </div>
+      <div class="row">
+        <a href="#random" class="box random-box" id="random-link">Can't decide which sister to support? Choose at random!</a>
+      </div>
+  </div>
+  <script>
+    const haileyUrl = "#hailey"; // placeholder
+    const laylaUrl = "#layla";   // placeholder
+    document.getElementById('random-link').addEventListener('click', function(e) {
+      e.preventDefault();
+      const urls = [haileyUrl, laylaUrl];
+      const chosen = urls[Math.floor(Math.random() * urls.length)];
+      window.location.href = chosen;
+    });
+  </script>
+</body>
+</html>
