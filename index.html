@@ -11,6 +11,9 @@
       background: #f8f8f8;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -33,6 +36,7 @@
       flex-direction: column;
       align-items: center;
       margin-top: 2rem;
+      flex: 1;
     }
 
     .row {
@@ -100,11 +104,16 @@
 
       .box .img-desktop { display: none; }
       .box .img-mobile { display: block; }
-
-      .container > .row:last-of-type {
-        order: -1;
-      }
     }
+
+    footer {
+      background: #4caf50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+
   </style>
 </head>
 <body>
@@ -130,10 +139,10 @@
         <p>Brownie Scout</p>
       </a>
     </div>
-      <div class="row">
-        <a href="#random" class="box random-box" id="random-link">Can't decide which sister to support? Choose at random!</a>
-      </div>
   </div>
+  <footer>
+    Thank you for your support!
+  </footer>
   <script>
     const haileyUrl = "https://www.gsdigitalcookie.com/cookie/Landing/3/55250ee4-ea79-40a3-8ccc-5b0df2b049df/en-US";
     const laylaUrl = "https://www.gsdigitalcookie.com/cookie/Landing/3/20919177-1358-4e51-a9d7-27df61fefe84/en-US";
