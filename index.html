@@ -82,6 +82,45 @@
       color: #ffb300;
     }
 
+    .progress {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .progress .goal {
+      color: #333;
+      display: block;
+      font-size: 0.95rem;
+      margin: 0.2rem 0;
+      text-align: center;
+    }
+
+    .progress progress {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 8px;
+      width: 70%;
+    }
+
+    .progress progress::-webkit-progress-bar {
+      background-color: #eee;
+      border-radius: 999px;
+    }
+
+    .progress progress::-webkit-progress-value {
+      background-color: #4caf50;
+      border-radius: 999px;
+    }
+
+    .progress progress::-moz-progress-bar {
+      background-color: #4caf50;
+      border-radius: 999px;
+    }
+
     .box .img-desktop, .box .img-mobile { margin: 1rem auto; }
     .box .img-desktop { display: block; }
     .box .img-mobile { display: none; }
@@ -131,12 +170,20 @@
         <img class="img-mobile" src="hailey_small.png" alt="Hailey">
         <h2>Hailey</h2>
         <p>Daisy Scout</p>
+        <div class="progress">
+          <progress value="28" max="160"></progress>
+          <p class="goal">Goal: 160 boxes</p>
+        </div>
       </a>
       <a href="https://www.gsdigitalcookie.com/cookie/Landing/3/20919177-1358-4e51-a9d7-27df61fefe84/en-US" class="box" id="layla-link">
         <img class="img-desktop" src="layla.png" alt="Layla">
         <img class="img-mobile" src="layla_small.png" alt="Layla">
         <h2>Layla</h2>
         <p>Brownie Scout</p>
+        <div class="progress">
+          <progress value="19" max="160"></progress>
+          <p class="goal">Goal: 160 boxes</p>
+        </div>
       </a>
     </div>
   </div>
